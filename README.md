@@ -1,34 +1,48 @@
 # UCL Link Microservices Architecture
 
-This repository is a part of the supplemental material for the Software Engineering group report, detailing the microservices architecture for the UCL Link application.
+This repository supplements the Software Engineering group report, presenting the microservices architecture for the UCL Link application.
 
 ## Project Structure
 
-The project is organized into microservices, each represented by a separate folder within the `./src` directory. These microservices contain pseudocode to illustrate the key interactions with the database, the initiation of Kafka messaging, and the usage of TypeORM for handling SQL queries.
+The project simulates the structure of microservices, each represented by pseudocode within the `./src` directory. Each service includes mock interactions with the database, Kafka event streams, and SQL queries via TypeORM.
 
 ### `./src`
 
-- `/AuthenticationService` - Handles user authentication and authorization.
-- `/UserService` - Manages user profiles and interactions.
-- `/EventService` - Coordinates event-related data and operations.
+- `/AuthenticationService` - Handles user authentication and authorization logic.
+- `/UserService` - Manages user profiles and interactions functionality.
+- `/EventService` - Coordinates event-related data and operations flow.
 - `/ChatService` - Facilitates real-time messaging between users.
-- `/FeedbackService` - Collects and processes user feedback.
-- `/NotificationService` - Manages the dispatch of notifications.
-- `/MatchingService` - Implements the logic for matching users.
-- `/GroupService` - Manages group data and interactions.
+- `/FeedbackService` - Processes and stores user feedback.
+- `/NotificationService` - Manages notification dispatch mechanisms.
+- `/MatchingService` - Contains the matching algorithm and related operations.
+- `/GroupService` - Handles group-related functionalities and data management.
 
 ### `./common`
 
-- `/interfaces.ts` - Defines the main TypeScript interfaces used across the microservices.
+- `/interfaces.ts` - Central TypeScript interfaces used throughout the microservices.
+
+### `./kafka`
+
+- `/kafkaConsumer.ts` - Pseudocode for Kafka consumer setup and message handling.
+- `/kafkaProducer.ts` - Pseudocode for Kafka producer setup and event emitting.
+
+### `./database`
+
+- `/connection.ts` - Pseudocode representing the database connection setup.
+- `/entities/user.entity.ts` - Pseudocode using TypeORM to define the user entity for PostgreSQL.
 
 ## Pseudocode
 
-The pseudocode included in each microservice is intended to demonstrate the intended functionality and flow of operations. This code serves as an outline for development and is not meant to be executed.
+Each microservice folder contains pseudocode that outlines its proposed functionality. This code illustrates the system's conceptual structure and is not executable.
 
 ## Interfaces
 
-The TypeScript interfaces that serve as the primary data structures and contracts for the microservices are located in `./common/interfaces.ts`. They provide a clear specification of the objects used within the system.
+The TypeScript interfaces located in `./common/interfaces.ts` define the core data structures and interfaces for inter-service communication.
 
 ## Setup
 
-Since the project contains pseudocode and is not intended to be run, there are no setup or installation steps. The
+The content of this project is for conceptual review and understanding and is not designed to run as a working application. However, you can see some of the dependencies installed in `/package.json`.
+
+
+---
+**Note:** This README is purely for documentation purposes and represents a non-functional architecture mock-up.
