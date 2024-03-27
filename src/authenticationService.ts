@@ -1,4 +1,4 @@
-import { AuthenticationInterface, User, Credentials, AuthToken } from './interfaces';
+import { AuthenticationInterface, User, Credentials, AuthToken } from '../common/interfaces';
 
 export class AuthenticationService implements AuthenticationInterface {
   async register(user: User): Promise<void> {

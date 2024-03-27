@@ -1,29 +1,22 @@
-import { MatchInterface } from './interfaces';
 
-export class MatchingService implements MatchInterface {
+export class MatchingService {
 
 
-    like() {
-        // Like a user
+    async like() {
     }
 
-    link() {
-        // Link with a user
+    async link() {
     }
 
-    match() {
-        // Match with a user
+    async match() {
     }
 
-    unmatch() {
-        // Unmatch with a user
+    async unmatch() {
     }
 
-    unlike() {
-        // Unlike a user
+    async unlike() {
     }
 
-    unlink() {
-        // Unlink with a user
+    async unlink() {
     }
 }
